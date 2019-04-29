@@ -29,14 +29,14 @@ public class Radix{
       int otherSize = temp.size();
       for (int i = 0; i < otherSize; i++){
         int value = temp.remove(0);
-        System.out.println("" + value);
+        //System.out.println("" + value);
         if (value <= 0){
           buckets[9 + getDigit(value, digit)].add(value);
         } else {
           buckets[10 + getDigit(value, digit)].add(value);
         }
       }
-      System.out.println(Arrays.toString(buckets));
+      //System.out.println(Arrays.toString(buckets));
       for (int i = 0; i < buckets.length; i ++){
         int sizeler = buckets[i].size();
           while (sizeler > 0){
@@ -45,7 +45,7 @@ public class Radix{
             sizeler--;
         }
       }
-      System.out.println(temp.toString());
+      //System.out.println(temp.toString());
       for (int i = 0; i < buckets.length; i++){
         buckets[i] = new MyLinkedList();
       }
@@ -53,7 +53,7 @@ public class Radix{
       max = max / 10;
     }
 
-    System.out.println(temp.toString());
+    //System.out.println(temp.toString());
     for (int i = 0; i < data.length; i++){
       data[i] = temp.remove(0);
     }
